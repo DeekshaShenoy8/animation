@@ -23,9 +23,18 @@ class ThirdViewController: UIViewController {
 
 
     @IBAction func moveToFourth(_ sender: Any) {
-        let fourthVC = FourthViewController(nibName: "FourthViewController", bundle: nil)
-        self.navigationController?.pushViewController(fourthVC, animated: true)
-       // present(fourthVC, animated: true, completion: nil)
+        
+        self.dismiss(animated: true, completion: {
+            
+            let fourthVC = FourthViewController(nibName: "FourthViewController", bundle: nil)
+                if let navigate = (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController as? UINavigationController
+                {
+                    navigate.pushViewController(fourthVC, animated: true)
+            //self.navigationController?.pushViewController(fourthVC, animated: true)
+            }
+
+        })
+               // present(fourthVC, animated: true, completion: nil)
         
     }
     /*

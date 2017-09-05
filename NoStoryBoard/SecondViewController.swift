@@ -24,9 +24,9 @@ class SecondViewController: UIViewController {
 
     @IBAction func presentToC(_ sender: Any) {
         let thirdVC = ThirdViewController(nibName: "ThirdViewController", bundle : nil)
-      
-        let navigationcontroller = UINavigationController(rootViewController: thirdVC)
-          present(navigationcontroller, animated: true, completion: nil)
+       // navigationController?.viewControllers.append(thirdVC)
+        //let navigationcontrol = UINavigationController(rootViewController: thirdVC)
+          present(thirdVC, animated: true, completion: nil)
         
     }
     /*

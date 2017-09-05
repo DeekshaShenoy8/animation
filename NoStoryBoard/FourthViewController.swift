@@ -22,6 +22,12 @@ class FourthViewController: UIViewController {
     }
     
 
+    @IBAction func goToHome(_ sender: Any) {
+      
+        self.navigationController?.popToRootViewController(animated: true)
+        
+        
+    }
     /*
     // MARK: - Navigation
 
