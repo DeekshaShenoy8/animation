@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  NoStoryBoard
 //
 //  Created by Deeksha Shenoy on 05/09/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +22,13 @@ class FirstViewController: UIViewController {
     }
     
 
-    @IBAction func onFirstVCButtonClick(_ sender: Any) {
-        
-        let SecondViewControl = SecondViewController(nibName: "SecondViewController", bundle: nil)
-       //  present(tableVC, animated: true, completion: nil)
-        self.navigationController?.pushViewController(SecondViewControl, animated: true)
+    @IBAction func presentToC(_ sender: Any) {
+        let thirdVC = ThirdViewController(nibName: "ThirdViewController", bundle : nil)
+      
+        let navigationcontroller = UINavigationController(rootViewController: thirdVC)
+          present(navigationcontroller, animated: true, completion: nil)
         
     }
-  
     /*
     // MARK: - Navigation
 

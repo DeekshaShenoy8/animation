@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  ThirdViewController.swift
 //  NoStoryBoard
 //
 //  Created by Deeksha Shenoy on 05/09/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class ThirdViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,16 +20,14 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    @IBAction func onFirstVCButtonClick(_ sender: Any) {
-        
-        let SecondViewControl = SecondViewController(nibName: "SecondViewController", bundle: nil)
-       //  present(tableVC, animated: true, completion: nil)
-        self.navigationController?.pushViewController(SecondViewControl, animated: true)
+
+    @IBAction func moveToFourth(_ sender: Any) {
+        let fourthVC = FourthViewController(nibName: "FourthViewController", bundle: nil)
+        self.navigationController?.pushViewController(fourthVC, animated: true)
+       // present(fourthVC, animated: true, completion: nil)
         
     }
-  
     /*
     // MARK: - Navigation
 
